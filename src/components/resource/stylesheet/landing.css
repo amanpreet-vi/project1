@@ -1,4 +1,5 @@
-.container {
+.landingContainer {
+  height: 80vh;
   display: flex;
   align-items: center;
   color: red;

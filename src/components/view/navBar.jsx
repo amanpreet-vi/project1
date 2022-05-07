@@ -1,5 +1,20 @@
 import React from "react";
+import "../resource/stylesheet/navbar.css";
 
 export default function NavBar() {
-  return <h2>Hello this is navbar</h2>;
+  return (
+    <div className="nav">
+      <div className="navContainer">
+        <div className="hamBurger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div className="links">
+          <div>about</div>
+          <div>contact us</div>
+        </div>
+      </div>
+    </div>
+  );
 }
