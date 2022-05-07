@@ -1,13 +1,15 @@
 import React from "react";
+
+import { Route, Router } from "react-router-dom";
+
 import Landing from "../view/landing";
-import NavBar from "../view/navBar";
+//import NavBar from "../view/navBar";
 
 function LandingPage(params) {
   return (
-    <div>
-      <NavBar />
-      <Landing />
-    </div>
+    <Router>
+      <Route path="/" element={Landing} />
+    </Router>
   );
 }
 
