@@ -1,0 +1,33 @@
+.searchContainer form {
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  box-shadow: 0px 0px 10px rgb(58, 56, 56);
+  font-size: 3vh;
+  background-color: rgb(230, 224, 224);
+  color: black;
+}
+.searchContainer input {
+  width: 40vw;
+  height: 5vh;
+  border: none;
+  outline: none;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.searchContainer button {
+  border: none;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: auto;
+
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+.searchContainer button img {
+  height: 5vh;
+  width: auto;
+}

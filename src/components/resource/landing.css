@@ -1,6 +1,7 @@
 .container {
   display: flex;
   align-items: center;
+  color: red;
   justify-content: center;
   background-color: rgb(230, 224, 224);
 }
