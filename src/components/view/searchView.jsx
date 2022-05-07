@@ -4,8 +4,8 @@ import arrowSearch from "../resource/search.png";
 
 export default function SearchView() {
   return (
-    <div className="searchContainer">
-      <form action="#">
+    <div>
+      <form action="#" className="searchContainer">
         <input
           className="search"
           type="text"
