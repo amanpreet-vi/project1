@@ -1,6 +1,6 @@
 import React from "react";
-import "../resource/search.css";
-import arrowSearch from "../resource/search.png";
+import "../resource/stylesheet/search.css";
+import arrowSearch from "../resource/images/search.png";
 
 export default function SearchView() {
   return (
