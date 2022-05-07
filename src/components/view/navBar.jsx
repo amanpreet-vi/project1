@@ -13,6 +13,7 @@ export default function NavBar() {
         <div className="links">
           <div>about</div>
           <div>contact us</div>
+          <div>enter</div>
         </div>
       </div>
     </div>
