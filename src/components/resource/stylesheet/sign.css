@@ -1,10 +1,10 @@
 .signContainer {
   width: 30em;
-  height: 30em;
+  height: 30em; /* height of whole entry page*/
   padding: 2em;
   border-radius: 2em;
   box-shadow: 0px 0px 10px black;
-  background-color: rgba(5, 7, 7, 0.801);
+  background-color: rgb(143, 173, 163);
 }
 .signContainer form {
   display: flex;
@@ -19,15 +19,26 @@
   width: 80%;
   height: 4vh;
   border-radius: 1em;
-  background-color: rgb(126, 126, 126);
+  background-color: rgb(216, 213, 213);
   color: black;
   border: none;
   outline: none;
   font-size: 2vh;
   padding: 0.6vh 2vw;
-  box-shadow: 0px 0px 3px black;
+  box-shadow: 0px 0px 4px black inset;
 }
 .signContainer form input::placeholder {
-  color: black;
+  color: rgb(121, 108, 108);
   font-size: 2vh;
+}
+.signContainer form input:focus::placeholder {
+  color: transparent;
+}
+.signRow {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+}
+.signRow button {
+  margin: 0vw 2vw;
 }

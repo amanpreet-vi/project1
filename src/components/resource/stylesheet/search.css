@@ -20,7 +20,14 @@
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
 }
+.searchContainer input::placeholder {
+  font-weight: bolder;
+  color: rgb(230, 224, 224);
+}
 
+.searchContainer input:focus::placeholder {
+  color: transparent;
+}
 .searchContainer button {
   border: none;
   border-top-right-radius: 10px;
