@@ -7,23 +7,34 @@ export default function Entry() {
 
   return (
     <>
-      <div>
-        <button
-          onClick={() => {
-            setSignIn("active");
-          }}
-        >
-          Sign In
-        </button>
-        <button
-          onClick={() => {
-            setSignIn("inactive");
-          }}
-        >
-          Sign Up
-        </button>
+      <div
+        style={{
+          width: "98vw",
+          height: "100vh",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          flexDirection: "column",
+        }}
+      >
+        <div>
+          <button
+            onClick={() => {
+              setSignIn("active");
+            }}
+          >
+            Sign In
+          </button>
+          <button
+            onClick={() => {
+              setSignIn("inactive");
+            }}
+          >
+            Sign Up
+          </button>
+        </div>
+        <div>{signIn === "active" ? <SignIn /> : <SignUp />}</div>
       </div>
-      <div>{signIn === "active" ? <SignIn /> : <SignUp />}</div>
     </>
   );
 }

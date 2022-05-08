@@ -1,5 +1,10 @@
 import React from "react";
+import SignInView from "../view/signInView";
 
 export default function SignIn() {
-  return <h2>This is signIN page</h2>;
+  return (
+    <>
+      <SignInView />
+    </>
+  );
 }
