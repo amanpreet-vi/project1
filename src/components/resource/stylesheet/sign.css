@@ -4,7 +4,7 @@
   padding: 2em;
   border-radius: 2em;
   box-shadow: 0px 0px 10px black;
-  background-color: red;
+  background-color: rgba(5, 7, 7, 0.801);
 }
 .signContainer form {
   display: flex;
@@ -15,7 +15,19 @@
   justify-content: space-evenly;
 }
 .signContainer form input,
-button {
+.signContainer form button {
   width: 80%;
   height: 4vh;
+  border-radius: 1em;
+  background-color: rgb(126, 126, 126);
+  color: black;
+  border: none;
+  outline: none;
+  font-size: 2vh;
+  padding: 0.6vh 2vw;
+  box-shadow: 0px 0px 3px black;
+}
+.signContainer form input::placeholder {
+  color: black;
+  font-size: 2vh;
 }
