@@ -2,6 +2,7 @@ import React from "react";
 
 import Landing from "../view/landing";
 import NavBar from "../view/navBar";
+import CardController from "./cardController";
 import AccessPage from "./entery";
 
 function LandingPage(params) {
@@ -10,6 +11,7 @@ function LandingPage(params) {
       <NavBar />
       <Landing />
       <AccessPage />
+      <CardController />
     </div>
   );
 }

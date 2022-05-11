@@ -4,5 +4,9 @@
   align-items: center;
   color: red;
   justify-content: center;
-  background-color: rgb(230, 224, 224);
+  /* background-color: rgb(230, 224, 224); */
+  background-image: url("https://wallpapercave.com/wp/wp1936883.jpg");
+  background-size: 100% 100%;
+  background-position: center;
+  background-blend-mode: lighten;
 }
