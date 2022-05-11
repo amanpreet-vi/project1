@@ -5,7 +5,9 @@ import SearchView from "./searchView";
 function Landing() {
   return (
     <div className="landingContainer">
-      <SearchView />
+      <div>
+        <SearchView />
+      </div>
     </div>
   );
 }
