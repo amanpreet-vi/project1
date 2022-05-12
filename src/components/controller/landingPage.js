@@ -2,16 +2,15 @@ import React from "react";
 
 import Landing from "../view/landing";
 import NavBar from "../view/navBar";
-import CardController from "./cardController";
-import AccessPage from "./entery";
+import "../resource/stylesheet/landingPage.css";
 
 function LandingPage(params) {
   return (
     <div>
-      <NavBar />
-      <Landing />
-      <AccessPage />
-      <CardController />
+      <div className="landingContainer">
+        <NavBar />
+        <Landing />
+      </div>
     </div>
   );
 }
