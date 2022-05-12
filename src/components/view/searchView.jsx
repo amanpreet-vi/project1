@@ -8,6 +8,7 @@ import searchDistrict from '../controller/searchDistrict';
 export default function SearchView() {
 	const [search, setSearch] = useState('');
 	const [district, setDistrict] = useState([]);
+	const [error, setError] = useState(false);
 
 	const handleChange = (e) => {
 		setSearch(e.target.value);
@@ -16,7 +17,11 @@ export default function SearchView() {
 		e.preventDefault();
 		searchDistrict(search)
 			.then((data) => {
-				setDistrict([...data]);
+				if (data.length === 0) setError(true);
+				else {
+					setError(false);
+					setDistrict([...data]);
+				}
 			})
 			.catch((e) => {
 				console.log(e);
@@ -41,19 +46,23 @@ export default function SearchView() {
 				</form>
 			</div>
 			<ol>
-				{district.map((d, i) => {
-					return (
-						<li key={i}>
-							{d.name}
-							<br />
-							<ul>
-								{d.constituency.map((c, i) => (
-									<li key={i}>{c}</li>
-								))}
-							</ul>
-						</li>
-					);
-				})}
+				{error ? (
+					<p>Enter Valid District Name</p>
+				) : (
+					district.map((d, i) => {
+						return (
+							<li key={i}>
+								{d.name}
+								<br />
+								<ul>
+									{d.constituency.map((c, i) => (
+										<li key={i}>{c}</li>
+									))}
+								</ul>
+							</li>
+						);
+					})
+				)}
 			</ol>
 		</>
 	);
