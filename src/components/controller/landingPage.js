@@ -1,19 +1,17 @@
-import React from "react";
+/** @format */
 
-import Landing from "../view/landing";
-import NavBar from "../view/navBar";
-import CardController from "./cardController";
-import AccessPage from "./entery";
+import React from 'react';
 
-function LandingPage(params) {
-  return (
-    <div>
-      <NavBar />
-      <Landing />
-      <AccessPage />
-      <CardController />
-    </div>
-  );
+import Landing from '../view/landing';
+import NavBar from '../view/navBar';
+
+function LandingPage() {
+	return (
+		<div>
+			<NavBar />
+			<Landing />
+		</div>
+	);
 }
 
 export default LandingPage;
