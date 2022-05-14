@@ -1,11 +1,14 @@
-import React from "react";
-import CardView from "../view/card";
+/** @format */
 
-export default function CardController() {
-  return (
-    <>
-      <CardView />
-      <CardView />
-    </>
-  );
+import React from 'react';
+import CardView from '../view/card';
+
+export default function CardController({ districts }) {
+	return (
+		<div className="card-list">
+			{districts.map((d, i) => (
+				<CardView district={d} key={i} />
+			))}
+		</div>
+	);
 }
