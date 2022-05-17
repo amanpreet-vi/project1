@@ -4,10 +4,12 @@ import React, { useState } from 'react';
 import '../resource/stylesheet/search.css';
 import arrowSearch from '../resource/images/search.png';
 import searchDistrict from '../controller/searchDistrict';
+import CardView from './card';
+import CardController from '../controller/cardController';
 
 export default function SearchView() {
 	const [search, setSearch] = useState('');
-	const [district, setDistrict] = useState([]);
+	const [districts, setDistricts] = useState([]);
 	const [error, setError] = useState(false);
 
 	const handleChange = (e) => {
@@ -20,7 +22,7 @@ export default function SearchView() {
 				if (data.length === 0) setError(true);
 				else {
 					setError(false);
-					setDistrict([...data]);
+					setDistricts([...data]);
 				}
 			})
 			.catch((e) => {
@@ -45,25 +47,13 @@ export default function SearchView() {
 					</button>
 				</form>
 			</div>
-			<ol>
+			<div>
 				{error ? (
 					<p>Enter Valid District Name</p>
 				) : (
-					district.map((d, i) => {
-						return (
-							<li key={i}>
-								{d.name}
-								<br />
-								<ul>
-									{d.constituency.map((c, i) => (
-										<li key={i}>{c}</li>
-									))}
-								</ul>
-							</li>
-						);
-					})
+					<CardController districts={districts} />
 				)}
-			</ol>
+			</div>
 		</>
 	);
 }

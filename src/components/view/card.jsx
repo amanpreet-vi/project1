@@ -1,15 +1,18 @@
-import React from "react";
-import "../resource/stylesheet/card.css";
+/** @format */
 
-export default function CardView() {
-  return (
-    <>
-      <div className="cardBlock">
-        <div>image</div>
-        <div>name</div>
-        <div>party</div>
-        <div>rating</div>
-      </div>
-    </>
-  );
+import React from 'react';
+import '../resource/stylesheet/card.css';
+
+export default function CardView({ district }) {
+	return (
+		<div className="card-container">
+			<h2>{district.name}</h2>
+			<h3>Constituency:</h3>
+			<ul>
+				{district.constituency.map((c, i) => (
+					<li key={i}>{c}</li>
+				))}
+			</ul>
+		</div>
+	);
 }

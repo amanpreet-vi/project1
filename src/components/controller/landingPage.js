@@ -1,18 +1,17 @@
-import React from "react";
+/** @format */
 
-import Landing from "../view/landing";
-import NavBar from "../view/navBar";
-import "../resource/stylesheet/landingPage.css";
+import React from 'react';
 
-function LandingPage(params) {
-  return (
-    <div>
-      <div className="landingContainer">
-        <NavBar />
-        <Landing />
-      </div>
-    </div>
-  );
+import Landing from '../view/landing';
+import NavBar from '../view/navBar';
+
+function LandingPage() {
+	return (
+		<div>
+			<NavBar />
+			<Landing />
+		</div>
+	);
 }
 
 export default LandingPage;
