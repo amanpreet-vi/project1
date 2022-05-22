@@ -10,6 +10,7 @@ function Landing() {
 			<SearchView />
 		</div>
 	);
+
 }
 
 export default Landing;

@@ -32,7 +32,9 @@ export default function SearchView() {
 	return (
 		<>
 			<div>
+
 				<form action="#" className="searchContainer">
+					
 					<input
 						className="search"
 						type="text"
