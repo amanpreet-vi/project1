@@ -1,20 +1,44 @@
-import React from "react";
-import "../resource/stylesheet/sign.css";
+/** @format */
 
-export default function SignUpView() {
-  return (
-    <div className="signContainer">
-      <form target="#">
-        <input type="text" placeholder="Full Name" />
-        <input type="email" placeholder="Email" />
-        <input type="text" placeholder="Pan Number" />
-        <input type="password" placeholder="Password" />
-        <input type="password" placeholder="Confirm" />
-        <div class="signRow">
-          <button type="submit">Submit</button>
-          <button type="reset">Reset</button>
-        </div>
-      </form>
-    </div>
-  );
+import React from 'react';
+import '../resource/stylesheet/sign.css';
+import NavBar from './navBar';
+
+export default function SignUpView({ handleChange, onSubmit }) {
+	return (
+		<>
+			<NavBar />
+
+			<div className="signContainer">
+				<form>
+					<input
+						type="text"
+						placeholder="Full Name"
+						onChange={handleChange('name')}
+					/>
+					<input
+						type="email"
+						placeholder="Email"
+						onChange={handleChange('email')}
+					/>
+					<input
+						type="text"
+						placeholder="Pan Number"
+						onChange={handleChange('pancard')}
+					/>
+					<input
+						type="password"
+						placeholder="Password"
+						onChange={handleChange('password')}
+					/>
+					<div className="signRow">
+						<button type="submit" onClick={onSubmit}>
+							Submit
+						</button>
+						<button type="reset">Reset</button>
+					</div>
+				</form>
+			</div>
+		</>
+	);
 }
