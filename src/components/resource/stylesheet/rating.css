@@ -1,4 +1,30 @@
+.ratingOuter {
+  display: flex;
+  padding: 2% 14%;
+  align-items: center;
+  width: 60%;
+}
 .ratingContainer {
-  width: 100%;
+  display: flex;
+  align-items: center;
+  width: 400px;
+  padding: 20px;
+  height: 60px;
   background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  border: 1px solid rgb(146, 146, 146);
+}
+.ratingContainer .firstStar {
+  width: 4vh;
+  height: 4vh;
+  margin: 0px 20px;
+  background-image: url("../images/star.png");
+  background-size: contain;
+}
+.ratingContainer .secondStar {
+  width: 4vh;
+  height: 4vh;
+  margin: 0px 20px;
+  background-image: url("../images/starblank.png");
+  background-size: contain;
 }

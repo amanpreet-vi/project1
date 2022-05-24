@@ -1,4 +1,5 @@
 import React from "react";
+
 import "../resource/stylesheet/candidate.css";
 import Info from "./info";
 import News from "./news";
@@ -14,7 +15,7 @@ export default function Candidate() {
           <News />
         </div>
         <div className="bottom">
-          <Rating />
+          <Rating stars={4} />
           <Review />
         </div>
       </div>

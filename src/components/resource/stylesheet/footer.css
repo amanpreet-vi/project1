@@ -1,0 +1,12 @@
+.footerContainer {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  background-color: rgb(7, 7, 7);
+  justify-content: center;
+}
+.footerContainer div {
+  color: white;
+  font-size: 8vh;
+}
