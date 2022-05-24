@@ -12,7 +12,7 @@
   height: 60px;
   background-color: rgb(255, 255, 255);
   border-radius: 20px;
-  border: 1px solid rgb(146, 146, 146);
+  box-shadow: 0px 0px 4px black;
 }
 .ratingContainer .firstStar {
   width: 4vh;

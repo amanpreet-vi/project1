@@ -7,9 +7,13 @@
   flex-direction: column;
   z-index: 1;
 }
+.infoContainer div {
+  font-size: 2vh;
+}
 .infoContainer .pic {
   height: 200px;
   width: 200px;
   border-radius: 5px;
-  background-image: url("https://picsum.photos/id/684/600/400");
+  background-image: url("../images/dp.jpeg");
+  background-size: cover;
 }

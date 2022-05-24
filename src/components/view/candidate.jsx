@@ -15,7 +15,7 @@ export default function Candidate() {
           <News />
         </div>
         <div className="bottom">
-          <Rating stars={4} />
+          <Rating stars={3} />
           <Review />
         </div>
       </div>
