@@ -1,0 +1,10 @@
+.base {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 95vh;
+  background-image: url("https://wallpapercave.com/wp/wp1936883.jpg");
+  background-size: 100% 100%;
+  background-position: center;
+  background-blend-mode: lighten;
+}
