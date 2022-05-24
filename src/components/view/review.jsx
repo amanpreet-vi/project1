@@ -1,3 +1,9 @@
 export default function Review() {
-  return <>Review</>;
+  return (
+    <>
+      <div className="reviewContainer">
+        <div>Review Container</div>
+      </div>
+    </>
+  );
 }
