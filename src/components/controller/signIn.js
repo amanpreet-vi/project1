@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { Redirect } from "react-router-dom";
 import SignInView from "../view/signInView";
-import { authenticate, isAuthenticated, signin } from "./authentication";
+import { authenticate, isAuthenticated, signin } from "./authentication/index";
 
 export default function SignIn() {
   const [values, setValues] = useState({
