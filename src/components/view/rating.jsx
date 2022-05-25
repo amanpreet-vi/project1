@@ -2,7 +2,7 @@ import React from "react";
 import "../resource/stylesheet/rating.css";
 
 export default function Rating(props) {
-  let total = 0;
+  // let total = 0;
   const values = [];
   const secondValue = [];
   let starcount = 0;

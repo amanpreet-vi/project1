@@ -7,11 +7,20 @@ import Rating from "./rating";
 import Review from "./review";
 
 export default function Candidate() {
+  const data = {
+    name: "Dr. G. S. Dharmesh",
+    Constituency: "AGRA CANTT. (SC)",
+    party: "BJP",
+    criminalCases: 1,
+    education: "Graduate Professional",
+    total_assets: "RS 4,35,97,778.00",
+  };
+
   return (
     <>
       <div className="candidateContainer">
         <div className="top">
-          <Info />
+          <Info candidate={data} />
           <News />
         </div>
         <div className="bottom">

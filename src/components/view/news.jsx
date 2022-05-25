@@ -6,28 +6,27 @@ export default function News() {
       <div className="newsContainer">
         <h2>Latest News</h2>
         <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
-          provident officia molestias repellendus, esse explicabo vitae! Cum
-          ratione aliquid iste maiores numquam et molestias ducimus repellendus
-          expedita, hic rem officiis.
+          Dr. G S Dharmesh is a BJP candidate from Agra Cantt constituency in
+          the 2022 Uttar Pradesh Assembly elections. His profession according to
+          the election affidavit filed with the Election Commission is .. Read
+          more
         </div>
         <div>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat
-          quas, ab, architecto nostrum est voluptatum minus odit quis cum
-          explicabo enim? Quidem sapiente, voluptatem ipsum fuga distinctio
-          commodi voluptates sed!
+          Dr GS Dharmesh has given a proposal to change the name of th .. Read
+          more
         </div>
         <div>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat
-          quas, ab, architecto nostrum est voluptatum minus odit quis cum
-          explicabo enim? Quidem sapiente, voluptatem ipsum fuga distinctio
-          commodi voluptates sed!
+          BJP retained its sitting MLA at Agra Cantt (reserved), Agra North,
+          Agra South and Bah assembly constituency. In the three urban seats,
+          Purshottam Khandelwal has again been fielded from Agra North, Yogendra
+          Upadhaya from Agra South and Dr GS Dharmesh, who is minister in Yogi
+          cabinet- from Agra Cantt .. Read more
         </div>
         <div>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat
-          quas, ab, architecto nostrum est voluptatum minus odit quis cum
-          explicabo enim? Quidem sapiente, voluptatem ipsum fuga distinctio
-          commodi voluptates sed!
+          BJP candidate Dr. G S Dharmesh looks to be heading towards a victory
+          over SP's Kunwar Chand in Agra Cantt.. While votes are still being
+          counted, Dr. G S Dharmesh has a substantial lead of 45872 votes over
+          Kunwar Chand. .. Read more
         </div>
       </div>
     </>

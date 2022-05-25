@@ -8,6 +8,7 @@ import NavBar from "./components/view/navBar";
 import "./components/resource/stylesheet/app.css";
 
 import CandidateController from "./components/controller/candidateController";
+import CardController from "./components/controller/cardController";
 
 export default function App() {
   return (
@@ -17,6 +18,9 @@ export default function App() {
         <Switch>
           <Route path="/" exact>
             <LandingPage />
+          </Route>
+          <Route path="/cards">
+            <CardController />
           </Route>
           <Route path="/signin">
             <SignIn />

@@ -45,13 +45,13 @@ export default function SearchView() {
           </button>
         </form>
       </div>
-      <div>
+      {/* <div>
         {error ? (
           <p>Enter Valid District Name</p>
         ) : (
           <CardController districts={districts} />
         )}
-      </div>
+      </div> */}
     </>
   );
 }
