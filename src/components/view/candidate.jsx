@@ -7,6 +7,7 @@ import Rating from "./rating";
 import Review from "./review";
 
 export default function Candidate() {
+  /** dummy data- used to render the element on the frontend*/
   const data = {
     name: "Dr. G. S. Dharmesh",
     Constituency: "AGRA CANTT. (SC)",
