@@ -1,5 +1,6 @@
-.searchContainer {
+.searchContainer > form {
   border-radius: 10px;
+  margin-bottom: 20vh;
   border: none;
   outline: none;
   display: flex;
@@ -10,7 +11,7 @@
   background-color: rgb(230, 224, 224);
   color: black;
 }
-.searchContainer input {
+.searchContainer > form > input {
   width: 40vw;
   height: 5vh;
   border: none;
@@ -20,15 +21,15 @@
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
 }
-.searchContainer input::placeholder {
+.searchContainer > form > input::placeholder {
   font-weight: bolder;
   color: rgb(230, 224, 224);
 }
 
-.searchContainer input:focus::placeholder {
+.searchContainer > form > input:focus::placeholder {
   color: transparent;
 }
-.searchContainer button {
+.searchContainer > form > button {
   border: none;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -39,7 +40,7 @@
   margin: 0;
   overflow: hidden;
 }
-.searchContainer button img {
+.searchContainer > form > button img {
   height: 5vh;
   width: auto;
 }

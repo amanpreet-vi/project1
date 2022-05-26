@@ -10,7 +10,7 @@ import NavBar from './components/view/navBar';
 import './components/resource/stylesheet/app.css';
 
 import CandidateController from './components/controller/candidateController';
-import CardController from './components/controller/cardController';
+// import CardController from './components/controller/cardController';
 
 export default function App() {
 	return (
