@@ -1,14 +1,34 @@
 /** @format */
 
-import React from 'react';
+import React, { useState } from 'react';
+import { Redirect } from 'react-router-dom';
 import Cards from '../view/card';
 import { searchCandidateByConstituency } from './searchCandidate';
 
 export default function CardController({ districts }) {
+	const [didRedirect, setDidRedirect] = useState(false);
+	const [candidate, setCandidate] = useState({});
+
+	const redirectTo = () => {
+		if (didRedirect) {
+			return (
+				<Redirect
+					to={{
+						pathname: '/candidate',
+						state: candidate,
+					}}
+				/>
+			);
+		}
+	};
+
 	const handleOnclick = (e) => {
 		const Constituency = e.target.innerText;
+
 		searchCandidateByConstituency(Constituency).then((data) => {
-			console.log(data.data[0]);
+			console.log(data);
+			setCandidate(data);
+			setDidRedirect(true);
 		});
 	};
 	return (
@@ -17,6 +37,7 @@ export default function CardController({ districts }) {
 				<Cards district={d} handleOnclick={handleOnclick} key={i} />
 			))}
 			{<Cards />}
+			{redirectTo()}
 		</div>
 	);
 }

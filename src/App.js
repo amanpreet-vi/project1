@@ -30,9 +30,10 @@ export default function App() {
 					<Route path="/signup">
 						<SignUp setRender={setRender} />
 					</Route>
-					<Route path="/candidate">
-						<CandidateController />
-					</Route>
+					<Route
+						path="/candidate"
+						render={(props) => <CandidateController {...props} />}
+					></Route>
 					<Route path="/admin">
 						<AdminPanelView />
 					</Route>

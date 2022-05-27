@@ -1,34 +1,28 @@
-import React from "react";
+/** @format */
 
-import "../resource/stylesheet/candidate.css";
-import Info from "./info";
-import News from "./news";
-import Rating from "./rating";
-import Review from "./review";
+import React from 'react';
 
-export default function Candidate() {
-  /** dummy data- used to render the element on the frontend*/
-  const data = {
-    name: "Dr. G. S. Dharmesh",
-    Constituency: "AGRA CANTT. (SC)",
-    party: "BJP",
-    criminalCases: 1,
-    education: "Graduate Professional",
-    total_assets: "RS 4,35,97,778.00",
-  };
+import '../resource/stylesheet/candidate.css';
+import Info from './info';
+import News from './news';
+import Rating from './rating';
+import Review from './review';
 
-  return (
-    <>
-      <div className="candidateContainer">
-        <div className="top">
-          <Info candidate={data} />
-          <News />
-        </div>
-        <div className="bottom">
-          <Rating stars={3} />
-          <Review />
-        </div>
-      </div>
-    </>
-  );
+export default function Candidate({ candidate }) {
+	/** dummy data- used to render the element on the frontend*/
+
+	return (
+		<>
+			<div className="candidateContainer">
+				<div className="top">
+					<Info candidate={candidate} />
+					<News newsArticles={candidate.newsArticles} />
+				</div>
+				<div className="bottom">
+					<Rating stars={3} />
+					<Review />
+				</div>
+			</div>
+		</>
+	);
 }

@@ -8,5 +8,10 @@
 }
 .newsContainer div {
   width: 90%;
+  margin-top: 10px;
   text-justify: inter-ideograph;
+}
+
+.sourcelink{
+  color: blue;
 }
