@@ -30,6 +30,8 @@
 }
 .links div {
   margin: 0 1vw;
+  user-select: none;
+  cursor: pointer;
 }
 .hamBurger {
   display: none;
