@@ -10,9 +10,9 @@ import NavBar from "./components/view/navBar";
 import "./components/resource/stylesheet/app.css";
 
 import CandidateController from "./components/controller/candidateController";
-import { isAuthenticated } from "./components/controller/authentication";
+// import { isAuthenticated } from "./components/controller/authentication";
 import AdminController from "./components/controller/adminController";
-import AdminPanelView from "./components/view/adminPanelView";
+// import AdminPanelView from "./components/view/adminPanelView";
 import About from "./components/view/about";
 // import CardController from './components/controller/cardController';
 
@@ -41,7 +41,7 @@ export default function App() {
             render={(props) => <CandidateController {...props} />}
           ></Route>
           <Route path="/admin">
-            <AdminPanelView />
+            <AdminController />
           </Route>
         </Switch>
       </div>
