@@ -11,7 +11,7 @@ export default function Review({ reviews }) {
 				) : (
 					reviews.map((review, i) => {
 						return (
-							<div>
+							<div key={i}>
 								<div>
 									<span>Rating: </span>
 									{review.rating}
