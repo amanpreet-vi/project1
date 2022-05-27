@@ -24,7 +24,9 @@ export default function NavBar({ setRender }) {
           <a href="/about">
             <div>about</div>
           </a>
-          <div>contact us</div>
+          <a href="/contact">
+            <div>contact us</div>
+          </a>
 
           {!isAuthenticated() && (
             <Fragment>
