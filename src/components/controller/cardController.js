@@ -26,7 +26,6 @@ export default function CardController({ districts }) {
 		const Constituency = e.target.innerText;
 
 		searchCandidateByConstituency(Constituency).then((data) => {
-			console.log(data);
 			setCandidate(data);
 			setDidRedirect(true);
 		});
