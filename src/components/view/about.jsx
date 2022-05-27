@@ -1,3 +1,5 @@
+import "../resource/stylesheet/about.css";
+
 export default function About() {
   return (
     <>
