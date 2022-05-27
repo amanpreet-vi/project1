@@ -1,6 +1,6 @@
 /** @format */
 
-import React, { Fragment, useState } from "react";
+import React, { Fragment } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { isAuthenticated, signout } from "../controller/authentication";
 import "../resource/stylesheet/navbar.css";
