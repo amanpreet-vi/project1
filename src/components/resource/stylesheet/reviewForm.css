@@ -1,0 +1,37 @@
+.reviewForm > form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 120px;
+  align-items: center;
+  padding: 10px;
+  justify-content: center;
+  background-color: antiquewhite;
+  outline: 1px solid black;
+  border-radius: 10px;
+}
+.reviewForm > form > div {
+  display: flex;
+  align-items: center;
+}
+.reviewForm > form > div > select {
+  width: 50px;
+  height: 5vh;
+  border-radius: 8px;
+}
+.reviewForm > form > div > textarea {
+  padding: 10px;
+  margin-left: 8px;
+  width: 300px;
+  height: 5vh;
+  border-radius: 8px;
+}
+
+.reviewForm > form > div > button {
+  width: 300px;
+  margin: 10px;
+  height: 30px;
+  border-radius: 8px;
+  border: none;
+  outline: 1px solid black;
+}
