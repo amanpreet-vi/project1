@@ -1,0 +1,53 @@
+.userPannelContainer {
+  background-color: rgb(214, 208, 208);
+  border-radius: 2em;
+  box-shadow: 0px 0px 8px black inset;
+  width: 70%;
+  padding: 20px;
+  height: 80%;
+  display: flex;
+}
+.userPannelContainer > .left {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.userPannelContainer > .left > div {
+  margin-top: 2vh;
+  width: 70%;
+  font-size: 1.6em;
+  padding: 5px;
+  border-radius: 0.4em;
+  background-color: rgb(238, 231, 231);
+}
+.beech {
+  height: 100%;
+  width: 20px;
+}
+.userPannelContainer > .right {
+  width: 60%;
+  height: 95%;
+  display: grid;
+  padding: 20px;
+  grid-template-columns: auto auto;
+}
+.userPannelContainer > .right > div {
+  width: 50%;
+  padding: 20px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  outline: 1px solid black;
+  justify-content: space-between;
+}
+.userPannelContainer > .right > div > button {
+  width: 100px;
+  height: 35px;
+  border-radius: 8px;
+  border: none;
+}
