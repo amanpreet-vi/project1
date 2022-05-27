@@ -5,12 +5,13 @@ import { Switch, Route } from 'react-router-dom';
 import LandingPage from './components/controller/landingPage';
 import SignIn from './components/controller/signIn';
 import SignUp from './components/controller/signUp';
-import AdminPanelView from './components/view/adminPanelView';
+// import AdminPanelView from "./components/view/adminPanelView";
 import NavBar from './components/view/navBar';
 import './components/resource/stylesheet/app.css';
 
 import CandidateController from './components/controller/candidateController';
 import { isAuthenticated } from './components/controller/authentication';
+import AdminController from './components/controller/adminController';
 // import CardController from './components/controller/cardController';
 
 export default function App() {
