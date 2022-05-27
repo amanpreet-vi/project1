@@ -48,7 +48,7 @@ export default function SearchView() {
       {
         <div className="resultContainer">
           {error ? (
-            <p>Enter Valid District Name</p>
+            <p>Enter Valid District name</p>
           ) : (
             <CardController districts={districts} />
           )}

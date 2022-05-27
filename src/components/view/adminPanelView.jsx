@@ -6,14 +6,12 @@ import AdminSideBar from "./adminSidebar";
 export default function AdminPanelView() {
   return (
     <>
-      <div className="adminContainer">
-        <div className="headingAdmin">
-          <div>Admin Dashboard</div>
-        </div>
-        <div className="adminInner">
-          <AdminSideBar />
-          <AdminSection />
-        </div>
+      <div className="headingAdmin">
+        <div>Admin Dashboard</div>
+      </div>
+      <div className="adminInner">
+        <AdminSideBar />
+        <AdminSection />
       </div>
     </>
   );
