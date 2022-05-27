@@ -1,8 +1,33 @@
 /** @format */
 
+import { useState } from 'react';
+import { Redirect } from 'react-router-dom';
+import { isAuthenticated } from '../controller/authentication';
+import { deleteReview } from '../controller/reviewApiCall';
 import '../resource/stylesheet/review.css';
 
-export default function Review({ reviews }) {
+export default function Review({ reviews, candidateID }) {
+	const { user, token } = isAuthenticated();
+	const [didRedirect, setDidRedirect] = useState(false);
+
+	const redirectTo = () => {
+		if (didRedirect) {
+			return (
+				<Redirect
+					to={{
+						pathname: '/',
+					}}
+				/>
+			);
+		}
+	};
+
+	const handleClick = (reviewID) => (event) => {
+		event.preventDefault();
+		deleteReview(token, candidateID, reviewID, user._id).then(() => {
+			setDidRedirect(true);
+		});
+	};
 	return (
 		<>
 			<div className="reviewContainer">
@@ -17,10 +42,21 @@ export default function Review({ reviews }) {
 									{review.rating}
 								</div>
 								<div>{review.comment}</div>
+								{user._id === review.author ? (
+									<button
+										onClick={handleClick(review._id)}
+										type="submit"
+									>
+										Delete
+									</button>
+								) : (
+									<></>
+								)}
 							</div>
 						);
 					})
 				)}
+				{redirectTo()}
 			</div>
 		</>
 	);
