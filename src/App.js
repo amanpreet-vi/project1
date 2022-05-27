@@ -15,7 +15,6 @@ import AdminController from "./components/controller/adminController";
 // import AdminPanelView from "./components/view/adminPanelView";
 import About from "./components/view/about";
 import Contact from "./components/view/contact";
-import UserPannelController from "./components/controller/userPannelController";
 // import CardController from './components/controller/cardController';
 
 export default function App() {
@@ -40,9 +39,6 @@ export default function App() {
           </Route>
           <Route path="/contact">
             <Contact />
-          </Route>
-          <Route path="/user">
-            <UserPannelController />
           </Route>
           <Route
             path="/candidate"
