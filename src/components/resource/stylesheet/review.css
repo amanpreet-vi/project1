@@ -2,7 +2,7 @@
   display: grid;
   padding: 10% 10%;
   width: 80%;
-  height: 80%;
+  height: 20%;
   grid-row-gap: 10%;
   grid-column-gap: 5%;
   grid-template-columns: auto auto auto;
@@ -10,15 +10,8 @@
 }
 .reviewContainer > div {
   display: flex;
+  flex-direction: column;
   padding: 10px;
   border-radius: 10px;
   outline: 1px solid black;
-}
-.reviewContainer > div > .imgReview {
-  background-image: url("../images/dp.jpeg");
-  background-size: cover;
-  height: 100%;
-  width: 40%;
-  border-radius: 10px;
-  margin-right: 10px;
 }

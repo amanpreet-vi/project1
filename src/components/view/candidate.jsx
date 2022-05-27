@@ -7,6 +7,7 @@ import Info from './info';
 import News from './news';
 import Rating from './rating';
 import Review from './review';
+import ReviewForm from './reviewForm';
 
 export default function Candidate({ candidate }) {
 	/** dummy data- used to render the element on the frontend*/
@@ -19,8 +20,9 @@ export default function Candidate({ candidate }) {
 					<News newsArticles={candidate.newsArticles} />
 				</div>
 				<div className="bottom">
-					<Rating stars={3} />
-					<Review />
+					<Rating stars={candidate.ratings} />
+					<ReviewForm />
+					<Review reviews={candidate.reviews} />
 				</div>
 			</div>
 		</>

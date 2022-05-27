@@ -12,6 +12,7 @@ import './components/resource/stylesheet/app.css';
 import CandidateController from './components/controller/candidateController';
 import { isAuthenticated } from './components/controller/authentication';
 import AdminController from './components/controller/adminController';
+import AdminPanelView from './components/view/adminPanelView';
 // import CardController from './components/controller/cardController';
 
 export default function App() {
