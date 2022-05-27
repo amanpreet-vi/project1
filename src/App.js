@@ -1,6 +1,6 @@
 /** @format */
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import LandingPage from './components/controller/landingPage';
 import SignIn from './components/controller/signIn';
@@ -10,22 +10,25 @@ import NavBar from './components/view/navBar';
 import './components/resource/stylesheet/app.css';
 
 import CandidateController from './components/controller/candidateController';
+import { isAuthenticated } from './components/controller/authentication';
 // import CardController from './components/controller/cardController';
 
 export default function App() {
+	const [render, setRender] = useState(false);
+
 	return (
 		<>
-			<NavBar />
+			<NavBar setRender={setRender} />
 			<div className="base">
 				<Switch>
 					<Route path="/" exact>
 						<LandingPage />
 					</Route>
 					<Route path="/signin">
-						<SignIn />
+						<SignIn setRender={setRender} />
 					</Route>
 					<Route path="/signup">
-						<SignUp />
+						<SignUp setRender={setRender} />
 					</Route>
 					<Route path="/candidate">
 						<CandidateController />

@@ -1,31 +1,59 @@
-import React from "react";
-import "../resource/stylesheet/navbar.css";
+/** @format */
 
-export default function NavBar() {
-  return (
-    <div className="nav">
-      <div className="navContainer">
-        <a className="title" href="/">
-          <div>
-            Vote<span>chain</span>
-          </div>
-        </a>
-        <div className="hamBurger">
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-        <div className="links">
-          <div>about</div>
-          <div>contact us</div>
-          <a href="signin">
-            <div>sign in</div>
-          </a>
-          <a href="signup">
-            <div>sign up</div>
-          </a>
-        </div>
-      </div>
-    </div>
-  );
+import React, { Fragment, useState } from 'react';
+import { Link, useHistory } from 'react-router-dom';
+import { isAuthenticated, signout } from '../controller/authentication';
+import '../resource/stylesheet/navbar.css';
+
+export default function NavBar({ setRender }) {
+	let history = useHistory();
+	return (
+		<div className="nav">
+			<div className="navContainer">
+				<a className="title" href="/">
+					<div>
+						Vote<span>chain</span>
+					</div>
+				</a>
+				<div className="hamBurger">
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+				<div className="links">
+					<div>about</div>
+					<div>contact us</div>
+
+					{!isAuthenticated() && (
+						<Fragment>
+							<div>
+								<Link className="nav-link" to="/signup">
+									Sign Up
+								</Link>
+							</div>
+							<div>
+								<Link className="nav-link" to="/signin">
+									Sign In
+								</Link>
+							</div>
+						</Fragment>
+					)}
+					{isAuthenticated() && (
+						<div>
+							<span
+								onClick={() => {
+									signout(() => {
+										setRender(false);
+										history.push('/');
+									});
+								}}
+							>
+								Sign Out
+							</span>
+						</div>
+					)}
+				</div>
+			</div>
+		</div>
+	);
 }
