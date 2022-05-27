@@ -10,6 +10,12 @@
   text-align: center;
 }
 .aboutContainer > p {
+  font-size: large;
   margin: auto;
+  text-align: justify;
   width: 80%;
+}
+.aboutContainer > hr {
+  margin-top: 4vh;
+  margin-bottom: 4vh;
 }
