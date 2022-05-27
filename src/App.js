@@ -1,6 +1,5 @@
 /** @format */
 
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import LandingPage from './components/controller/landingPage';
@@ -41,4 +40,4 @@ export default function App() {
 			</div>
 		</>
 	);
-	}
+}
