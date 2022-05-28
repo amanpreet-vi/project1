@@ -1,53 +1,35 @@
-import "../resource/stylesheet/userPannel.css";
-export default function UserPannel() {
-  return (
-    <>
-      <div className="userPannelContainer">
-        <div className="left">
-          <div>Name: Rajesh Kumar Tiwari </div>
-          <div>PanNumber: </div>
-          <div>Email: </div>
-        </div>
-        <div className="beech"></div>
-        <div className="right">
-          <div>
-            <div>Content bht jyada ho gya to delete krne me afat hogi</div>
-            <button>Delete</button>
-          </div>
-          <div>
-            <div>Content bht jyada ho gya to delete krne me afat hogi</div>
-            <button>Delete</button>
-          </div>
-          <div>
-            <div>Content bht jyada ho gya to delete krne me afat hogi</div>
-            <button>Delete</button>
-          </div>
-          <div>
-            <div>Content bht jyada ho gya to delete krne me afat hogi</div>
-            <button>Delete</button>
-          </div>
-          <div>
-            <div>Content bht jyada ho gya to delete krne me afat hogi</div>
-            <button>Delete</button>
-          </div>
-          <div>
-            <div>Content bht jyada ho gya to delete krne me afat hogi</div>
-            <button>Delete</button>
-          </div>
-          <div>
-            <div>Content bht jyada ho gya to delete krne me afat hogi</div>
-            <button>Delete</button>
-          </div>
-          <div>
-            <div>Content bht jyada ho gya to delete krne me afat hogi</div>
-            <button>Delete</button>
-          </div>
-          <div>
-            <div>Content bht jyada ho gya to delete krne me afat hogi</div>
-            <button>Delete</button>
-          </div>
-        </div>
-      </div>
-    </>
-  );
+/** @format */
+
+import { isAuthenticated } from '../controller/authentication';
+import '../resource/stylesheet/userPannel.css';
+export default function UserPannel({ reviews }) {
+	const {
+		user: { name, email, pancard },
+	} = isAuthenticated();
+	return (
+		<>
+			<div className="userPannelContainer">
+				<div className="left">
+					<div>Name: {name.toUpperCase()} </div>
+					<div>PanNumber: {pancard} </div>
+					<div>Email: {email}</div>
+				</div>
+				<div className="beech"></div>
+				<div className="right">
+					{reviews.map((review) => {
+						return (
+							<div>
+								<div>
+									<span>Rating: </span>
+									{review.rating}
+								</div>
+								<div>{review.comment}</div>
+								<button>Delete</button>
+							</div>
+						);
+					})}
+				</div>
+			</div>
+		</>
+	);
 }
