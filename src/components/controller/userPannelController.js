@@ -7,6 +7,8 @@ import { getAllReviewOfUser } from './reviewApiCall';
 
 export default function UserPannelController() {
 	const { user, token } = isAuthenticated();
+	const [didRedirect, setDidRedirect] = useState(false);
+
 	const [reviews, setReviews] = useState([]);
 	const preload = () => {
 		getAllReviewOfUser(user._id, token).then((data) => {
@@ -20,7 +22,7 @@ export default function UserPannelController() {
 
 	return (
 		<>
-			<UserPannel reviews={reviews} />
+			<UserPannel reviews={reviews} setDidRedirect={setDidRedirect} />
 		</>
 	);
 }

@@ -1,11 +1,21 @@
 /** @format */
 
+import { useState } from 'react';
 import { isAuthenticated } from '../controller/authentication';
+import { deleteReview } from '../controller/reviewApiCall';
 import '../resource/stylesheet/userPannel.css';
-export default function UserPannel({ reviews }) {
+export default function UserPannel({ reviews, setDidRedirect }) {
 	const {
-		user: { name, email, pancard },
+		token,
+		user: { name, email, pancard, _id },
 	} = isAuthenticated();
+
+	const handleOnclick = (review) => (event) => {
+		event.preventDefault();
+		deleteReview(token, review.candidate, review._id, _id).then(() => {
+			setDidRedirect((prev) => !prev);
+		});
+	};
 	return (
 		<>
 			<div className="userPannelContainer">
@@ -24,7 +34,9 @@ export default function UserPannel({ reviews }) {
 									{review.rating}
 								</div>
 								<div>{review.comment}</div>
-								<button>Delete</button>
+								<button onClick={handleOnclick(review)}>
+									Delete
+								</button>
 							</div>
 						);
 					})}
