@@ -39,7 +39,7 @@ export default function SignIn({ setRender }) {
 					setValues({ ...values, error: data.error, loading: false });
 				} else {
 					authenticate(data, () => {
-						setRender(true);
+						setRender((prev) => !prev);
 						setValues({
 							...values,
 							didRedirect: true,

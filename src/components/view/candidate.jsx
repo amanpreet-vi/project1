@@ -30,7 +30,10 @@ export default function Candidate({ candidate }) {
 						<></>
 					)}
 
-					<Review reviews={candidate.reviews} />
+					<Review
+						reviews={candidate.reviews}
+						candidateID={candidate._id}
+					/>
 				</div>
 			</div>
 		</>
