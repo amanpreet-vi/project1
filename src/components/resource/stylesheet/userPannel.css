@@ -38,17 +38,21 @@
   text-align: center;
 }
 .userPannelContainer > .right > .reviewList {
-  width: auto;
+  width: min-content;
   height: auto;
   display: grid;
+  overflow-y: scroll;
   column-gap: 80px;
   row-gap: 80px;
-  justify-content: center;
   grid-template-columns: auto auto;
-  padding: 100px;
+  padding-top: 100px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
 }
 .userPannelContainer > .right > .reviewList > .reviewBox {
   padding: 10px;
+  width: 15vw;
   text-align: center;
   border-radius: 10px;
   outline: 1px solid black;
