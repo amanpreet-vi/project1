@@ -20,7 +20,7 @@ export default function UserPannel({ reviews, setDidRedirect }) {
     <>
       <div className="userPannelContainer">
         <div className="left">
-          <h1>Candidate Info</h1>
+          <h1>User Info</h1>
           <div>Name: {name.toUpperCase()} </div>
           <div>PanNumber: {pancard} </div>
           <div>Email: {email}</div>
