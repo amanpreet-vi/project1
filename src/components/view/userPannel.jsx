@@ -36,7 +36,7 @@ export default function UserPannel({ reviews, setDidRedirect }) {
                     <span>Rating: </span>
                     {review.rating}
                   </div>
-                  <div>{review.comment}</div>
+                  <div className="reviewComment">{review.comment}</div>
                   <button onClick={handleOnclick(review)}>Delete</button>
                 </div>
               );
