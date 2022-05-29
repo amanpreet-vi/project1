@@ -1,5 +1,6 @@
 .reviewForm > form {
   display: flex;
+  margin-left:250px;
   flex-direction: column;
   width: 400px;
   height: 120px;

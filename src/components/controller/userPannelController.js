@@ -18,7 +18,7 @@ export default function UserPannelController() {
 
 	useEffect(() => {
 		preload();
-	}, []);
+	}, [didRedirect]);
 
 	return (
 		<>

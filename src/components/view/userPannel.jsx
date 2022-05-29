@@ -20,12 +20,14 @@ export default function UserPannel({ reviews, setDidRedirect }) {
 		<>
 			<div className="userPannelContainer">
 				<div className="left">
+					<h1>Candidate Info</h1>
 					<div>Name: {name.toUpperCase()} </div>
 					<div>PanNumber: {pancard} </div>
 					<div>Email: {email}</div>
 				</div>
 				<div className="beech"></div>
 				<div className="right">
+					<h1 style={{ margin: 'auto' }}>Reviews</h1>
 					{reviews.map((review) => {
 						return (
 							<div>
