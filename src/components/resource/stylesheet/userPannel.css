@@ -31,13 +31,14 @@
   width: 60%;
   height: 95%;
   display: grid;
+  align-items: center;
   padding: 20px;
   grid-template-columns: auto auto;
 }
 .userPannelContainer > .right > div {
   width: 50%;
   padding: 20px;
-  margin: 10px;
+  height: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -28,6 +28,17 @@ export default function NavBar({ setRender }) {
 						<div>contact us</div>
 					</a>
 
+					{isAuthenticated() && isAuthenticated().user.role === 0 && (
+						<div>
+							<Link to="/user/dashboard">DashBoard</Link>
+						</div>
+					)}
+					{isAuthenticated() && isAuthenticated().user.role === 1 && (
+						<div>
+							<Link to="/admin/dashboard">A . DashBoard</Link>
+						</div>
+					)}
+
 					{!isAuthenticated() && (
 						<Fragment>
 							<div>

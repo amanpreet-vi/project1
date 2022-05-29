@@ -15,7 +15,7 @@ export default function Review({ reviews, candidateID }) {
 			return (
 				<Redirect
 					to={{
-						pathname: '/',
+						pathname: '/user/dashboard',
 					}}
 				/>
 			);
