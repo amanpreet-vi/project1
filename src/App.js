@@ -56,7 +56,7 @@ export default function App() {
 						exact
 						component={AllCandidates}
 					/>
-					/>
+
 					<AdminRoute
 						path="/admin/dashboard/reviews"
 						exact
