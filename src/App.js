@@ -17,6 +17,7 @@ import AdminPanelView from './components/view/adminPanelView';
 import PrivateRoute from './components/controller/authentication/PrivateRoute';
 import UserPannelController from './components/controller/userPannelController';
 import AllCandidates from './components/view/allCandidates.admin';
+import AllReviews from './components/view/allReviews.admin';
 
 export default function App() {
 	const [render, setRender] = useState(false);
@@ -54,6 +55,12 @@ export default function App() {
 						path="/admin/dashboard/candidates"
 						exact
 						component={AllCandidates}
+					/>
+					/>
+					<AdminRoute
+						path="/admin/dashboard/reviews"
+						exact
+						component={AllReviews}
 					/>
 					<PrivateRoute
 						path="/user/dashboard"

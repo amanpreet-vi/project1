@@ -1,14 +1,16 @@
 /** @format */
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Redirect } from 'react-router-dom';
 import { isAuthenticated } from '../controller/authentication';
-import { deleteReview } from '../controller/reviewApiCall';
+import { deleteReview, getAllReviews } from '../controller/reviewApiCall';
 import '../resource/stylesheet/review.css';
 
-export default function Review({ reviews, candidateID }) {
+export default function AllReviews() {
 	const { user, token } = isAuthenticated();
 	const [didRedirect, setDidRedirect] = useState(false);
+
+	const [reviews, setReviews] = useState([]);
 
 	const redirectTo = () => {
 		if (didRedirect) {
@@ -22,12 +24,20 @@ export default function Review({ reviews, candidateID }) {
 		}
 	};
 
-	const handleClick = (reviewID) => (event) => {
+	const handleClick = (reviewID, candidateID) => (event) => {
 		event.preventDefault();
 		deleteReview(token, candidateID, reviewID, user._id).then(() => {
 			setDidRedirect(true);
 		});
 	};
+
+	useEffect(() => {
+		getAllReviews(user._id, token)
+			.then((data) => {
+				setReviews(data);
+			})
+			.catch(console.log);
+	}, []);
 	return (
 		<>
 			<div className="reviewContainer">
@@ -38,6 +48,7 @@ export default function Review({ reviews, candidateID }) {
 						return (
 							<div key={i}>
 								<div>
+									<h1>{review.author.name}</h1>
 									<span>Rating: </span>
 									{review.rating}
 								</div>
