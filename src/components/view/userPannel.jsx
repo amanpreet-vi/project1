@@ -11,8 +11,6 @@ export default function UserPannel({ reviews, setDidRedirect }) {
 		user: { name, email, pancard, _id },
 	} = isAuthenticated();
 
-	const [candidate, SetCandidate] = useState({});
-
 	const handleOnclick = (review) => (event) => {
 		event.preventDefault();
 		deleteReview(token, review.candidate._id, review._id, _id).then(() => {

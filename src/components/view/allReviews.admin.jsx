@@ -17,7 +17,7 @@ export default function AllReviews() {
 			return (
 				<Redirect
 					to={{
-						pathname: '/user/dashboard',
+						pathname: '/admin/dashboard',
 					}}
 				/>
 			);
@@ -56,7 +56,10 @@ export default function AllReviews() {
 								{user._id === review.author ||
 								user.role === 1 ? (
 									<button
-										onClick={handleClick(review._id)}
+										onClick={handleClick(
+											review._id,
+											review.candidate,
+										)}
 										type="submit"
 									>
 										Delete

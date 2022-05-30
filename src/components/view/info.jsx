@@ -1,11 +1,13 @@
 /** @format */
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { isAuthenticated } from '../controller/authentication';
 import '../resource/stylesheet/info.css';
 
 export default function Info({ candidate }) {
 	const { user } = isAuthenticated();
+	console.log('in info');
 	return (
 		<>
 			<div className="infoContainer">
@@ -19,7 +21,17 @@ export default function Info({ candidate }) {
 				<div>Education : {candidate.education}</div>
 				{user.role === 1 ? (
 					<>
-						<button>Update</button>
+						<button>
+							<Link
+								to={{
+									pathname:
+										'/admin/dashboard/candidate/update',
+									state: candidate,
+								}}
+							>
+								Update
+							</Link>
+						</button>
 						<button>Delete</button>
 					</>
 				) : (
