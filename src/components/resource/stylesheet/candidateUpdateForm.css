@@ -1,0 +1,49 @@
+.updateForm {
+  width: 20vw;
+  padding: 2em;
+  border-radius: 10px;
+  background-color: rgb(218, 208, 208);
+}
+.updateForm > form {
+  display: flex;
+  flex-direction: column;
+}
+.updateForm > form > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.updateForm > form > div > button {
+  height: 50px;
+  outline: none;
+  font-size: 20px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0px 0px 4px black;
+}
+.updateForm > form > div > button:hover {
+  background-color: antiquewhite;
+}
+.updateForm > form > div > div {
+  display: flex;
+  width: 100%;
+  margin: 20px 0px;
+  font-size: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.updateForm > form > div > div > label {
+  width: 200px;
+}
+.updateForm > form > div > div > input {
+  outline: none;
+  border: none;
+  box-shadow: 0px 0px 4px black;
+  width: 300px;
+  height: 50px;
+  padding: 0px 20px;
+  border-radius: 10px;
+}

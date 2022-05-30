@@ -15,3 +15,7 @@
   border-radius: 10px;
   outline: 1px solid black;
 }
+.reviewContainer > .infoContainer {
+  width: 30vw;
+  margin: 20px;
+}

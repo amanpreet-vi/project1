@@ -6,11 +6,26 @@
   justify-content: space-evenly;
   flex-direction: column;
   z-index: 1;
+  background-color: rgb(218, 208, 208);
 }
 .infoContainer div {
   font-size: 2vh;
 }
-.infoContainer .pic {
+
+.infoContainer button {
+  font-size: 2vh;
+  outline: none;
+  border: none;
+  color: black;
+  padding: 10px 15px;
+  border-radius: 10px;
+  width: 100px;
+  box-shadow: 0px 0px 2px black;
+}
+.infoContainer button > a {
+  color: black;
+}
+.infoContainer > .infoContainer .pic {
   height: 200px;
   width: 200px;
   border-radius: 5px;
