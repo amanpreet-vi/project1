@@ -12,12 +12,19 @@ import '../resource/stylesheet/review.css';
 export default function AllCandidates() {
 	const { user, token } = isAuthenticated();
 	const [candidates, setCandidates] = useState([]);
+	const [page, setPage] = useState(1);
+	const [next, setNext] = useState(undefined);
+	const [prev, setPrev] = useState(undefined);
 	const [didRedirect, setDidRedirect] = useState(false);
 
 	const preload = () => {
-		getallCandidate(1, 10, token)
+		getallCandidate(page, 10, token, user._id)
 			.then((data) => {
-				setCandidates(data);
+				console.log(data);
+				const { Candidates, next, prev } = data;
+				setNext(next ? next.page : undefined);
+				setPrev(prev ? prev.page : undefined);
+				setCandidates([...Candidates]);
 			})
 			.catch((err) => {
 				console.log(err);
@@ -25,25 +32,40 @@ export default function AllCandidates() {
 	};
 
 	useEffect(() => {
+		console.log('in use');
 		preload();
-	}, []);
-	// const handleClick = (reviewID) => (event) => {
-	// 	event.preventDefault();
-	// 	deleteReview(token, candidateID, reviewID, user._id).then(() => {
-	// 		setDidRedirect(true);
-	// 	});
-	// };
+	}, [page]);
+
 	return (
 		<>
 			<div className="reviewContainer">
-				{candidates.length === 0 ? (
-					<div>No Review Yet</div>
-				) : (
-					candidates.map((candidate, i) => {
-						return <Info candidate={candidate} key={i} />;
-					})
-				)}
+				{candidates.map((candidate) => {
+					return <Info candidate={candidate} />;
+				})}
 			</div>
+
+			{prev ? (
+				<button
+					onClick={() => {
+						setPage(prev);
+					}}
+				>
+					Prev
+				</button>
+			) : (
+				<></>
+			)}
+			{next ? (
+				<button
+					onClick={() => {
+						setPage(next);
+					}}
+				>
+					next
+				</button>
+			) : (
+				<></>
+			)}
 		</>
 	);
 }
