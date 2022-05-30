@@ -17,6 +17,23 @@ export const getAllReviewOfUser = (userID, token) => {
 		.catch((err) => console.log(err));
 };
 
+export const getAllReviews = (userID, token) => {
+	return fetch(`${API}/admin/${userID}/allreview`, {
+		method: 'GET',
+		headers: {
+			Accept: 'application/json',
+			'Content-Type': 'application/json',
+			Authorization: `Bearer ${token}`,
+		},
+	})
+		.then((res) => {
+			return res.json();
+		})
+		.catch((err) => {
+			console.log(err);
+		});
+};
+
 export const createReview = (rating, comment, token, candidateID, userID) => {
 	return fetch(`${API}/candidate/${candidateID}/review/create/${userID}`, {
 		method: 'POST',
@@ -44,6 +61,8 @@ export const deleteReview = (token, candidateID, reviewID, userID) => {
 			},
 		},
 	)
-		.then((res) => res.json())
+		.then((res) => {
+			res.json();
+		})
 		.catch((err) => console.log(err));
 };

@@ -5,12 +5,12 @@ import { Route, Redirect } from 'react-router';
 import { isAuthenticated } from '.';
 
 const AdminRoute = ({ component: Component, ...rest }) => {
+	console.log({ ...rest });
 	return (
 		<Route
-			{...rest}
 			render={(props) =>
 				isAuthenticated() && isAuthenticated().user.role === 1 ? (
-					<Component {...props} />
+					<Component {...rest} />
 				) : isAuthenticated() ? (
 					<Redirect
 						to={{
