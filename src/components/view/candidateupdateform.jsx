@@ -3,10 +3,12 @@ import '../resource/stylesheet/candidateUpdateForm.css';
 import React, { useState } from 'react';
 import { updateCandidate } from '../controller/admin';
 import { isAuthenticated } from '../controller/authentication';
+import { Redirect } from 'react-router-dom';
 
 export default function CandidateUpdate(props) {
 	const [candidate, setCandidate] = useState(props.location.state);
 	const { user, token } = isAuthenticated();
+	const [didRedirect, setDidRedirect] = useState(false);
 
 	const handleChange = (name) => (event) => {
 		setCandidate({
@@ -19,7 +21,10 @@ export default function CandidateUpdate(props) {
 		event.preventDefault();
 		setCandidate({ ...candidate });
 		updateCandidate(user._id, candidate._id, token, candidate)
-			.then((data) => console.log(data))
+			.then((data) => {
+				setDidRedirect((prev) => !prev);
+				console.log(data);
+			})
 			.catch(console.log);
 	};
 
@@ -90,6 +95,7 @@ export default function CandidateUpdate(props) {
 						<button onClick={onSubmit}>update</button>
 					</div>
 				</form>
+				{didRedirect ? <Redirect to="/admin/dashboard" /> : <></>}
 			</div>
 		</>
 	);
