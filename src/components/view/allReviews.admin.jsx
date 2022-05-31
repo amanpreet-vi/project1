@@ -34,22 +34,21 @@ export default function AllReviews() {
   useEffect(() => {
     getAllReviews(user._id, token)
       .then((data) => {
-        console.log(data);
         setReviews(data);
       })
       .catch(console.log);
   }, []);
   return (
-    <>
+    <div style={{ height: "100vh" }}>
       <div className="allReviewContainer">
         {reviews.length === 0 ? (
           <div>No Review Yet</div>
         ) : (
           reviews.map((review, i) => {
             return (
-              <div key={i}>
+              <div className="reviewBox" key={i}>
                 <div>
-                  <h1>{review.author}</h1>
+                  <h1>{review.author.name}</h1>
                   <span>Rating: </span>
                   {review.rating}
                 </div>
@@ -70,6 +69,6 @@ export default function AllReviews() {
         )}
         {redirectTo()}
       </div>
-    </>
+    </div>
   );
 }
