@@ -34,6 +34,7 @@ export default function AllReviews() {
   useEffect(() => {
     getAllReviews(user._id, token)
       .then((data) => {
+        console.log(data);
         setReviews(data);
       })
       .catch(console.log);
@@ -48,7 +49,7 @@ export default function AllReviews() {
             return (
               <div key={i}>
                 <div>
-                  <h1>{review.author.name}</h1>
+                  <h1>{review.author}</h1>
                   <span>Rating: </span>
                   {review.rating}
                 </div>
