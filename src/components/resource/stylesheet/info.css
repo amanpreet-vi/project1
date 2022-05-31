@@ -3,6 +3,7 @@
   height: 100%;
   display: flex;
   align-items: center;
+  border-radius: 2em;
   justify-content: space-evenly;
   flex-direction: column;
   z-index: 1;
@@ -12,9 +13,11 @@
   font-size: 2vh;
 }
 
-.infoContainer button {
+.infoContainer > button,
+.infoContainer > a > button {
   font-size: 2vh;
   outline: none;
+  margin: 6px 0px;
   border: none;
   color: black;
   padding: 10px 15px;
@@ -22,9 +25,12 @@
   width: 100px;
   box-shadow: 0px 0px 2px black;
 }
-.infoContainer button > a {
-  color: black;
+.infoContainer > button:hover,
+.infoContainer > a > button:hover {
+  color: white;
+  background-color: rgb(138, 138, 138);
 }
+
 .infoContainer > .pic {
   height: 200px;
   width: 200px;

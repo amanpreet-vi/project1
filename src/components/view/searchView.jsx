@@ -11,12 +11,14 @@ export default function SearchView() {
   const [search, setSearch] = useState("");
   const [districts, setDistricts] = useState([]);
   const [error, setError] = useState(false);
+  const [bottom, setBottome] = useState(0);
 
   const handleChange = (e) => {
     setSearch(e.target.value);
   };
   const handleOnsubmit = (e) => {
     e.preventDefault();
+    setBottome(1);
     searchDistrict(search)
       .then((data) => {
         if (data.length === 0) setError(true);
@@ -45,7 +47,9 @@ export default function SearchView() {
           </button>
         </form>
       </div>
-      {
+      {bottom === 0 ? (
+        <div className="bottom"></div>
+      ) : (
         <div className="resultContainer">
           {error ? (
             <p>Enter Valid District name</p>
@@ -53,7 +57,7 @@ export default function SearchView() {
             <CardController districts={districts} />
           )}
         </div>
-      }
+      )}
     </>
   );
 }

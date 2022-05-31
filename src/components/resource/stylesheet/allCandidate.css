@@ -1,9 +1,48 @@
 .allCandidateContainer {
   width: 100vw;
-  position: relative;
-  background-color: red;
+  padding: 10vh 0vw;
 }
 .allCandidateContainer > .upper {
   width: 100%;
-  height: 200vh;
+  height: 5vh;
+}
+
+.allCandidateContainer > div {
+  display: flex;
+  height: auto;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.allCandidateContainer > div > .jumbotron {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  row-gap: 20px;
+  column-gap: 30px;
+}
+.allCandidateContainer > div > .jumbotron > .infoContainer {
+  width: 20vw;
+  height: 60vh;
+}
+.allCandidateContainer > div > .buttonContainer {
+  width: 500px;
+  display: flex;
+  margin-top: 5vh;
+  align-items: center;
+  justify-content: space-between;
+}
+.buttonContainer > button {
+  width: 100px;
+  height: auto;
+  font-size: 20px;
+  padding: 5px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px black;
+}
+.buttonContainer > button:hover {
+  color: white;
+  background-color: rgb(141, 137, 131);
 }

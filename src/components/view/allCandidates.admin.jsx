@@ -42,33 +42,36 @@ export default function AllCandidates() {
       <div className="allCandidateContainer">
         <div className="upper"></div>
         <div>
-          {candidates.map((candidate) => {
-            return <Info candidate={candidate} />;
-          })}
+          <div className="jumbotron">
+            {candidates.map((candidate) => {
+              return <Info candidate={candidate} />;
+            })}
+          </div>
+          <div className="buttonContainer">
+            {prev ? (
+              <button
+                onClick={() => {
+                  setPage(prev);
+                }}
+              >
+                Prev
+              </button>
+            ) : (
+              <></>
+            )}
+            {next ? (
+              <button
+                onClick={() => {
+                  setPage(next);
+                }}
+              >
+                next
+              </button>
+            ) : (
+              <></>
+            )}
+          </div>
         </div>
-
-        {prev ? (
-          <button
-            onClick={() => {
-              setPage(prev);
-            }}
-          >
-            Prev
-          </button>
-        ) : (
-          <></>
-        )}
-        {next ? (
-          <button
-            onClick={() => {
-              setPage(next);
-            }}
-          >
-            next
-          </button>
-        ) : (
-          <></>
-        )}
       </div>
     </>
   );

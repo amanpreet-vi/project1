@@ -1,17 +1,6 @@
-.landingContainer > .searchContainer {
-  /* width: 100%; */
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* color: red; */
-  justify-content: space-evenly;
-  overflow-x: scroll;
+.landingContainer {
+  height: auto;
 }
-.landingContainer > .resultContainer {
-  width: 80%;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+.landingContainer > .bottom {
+  height: 50vh;
 }

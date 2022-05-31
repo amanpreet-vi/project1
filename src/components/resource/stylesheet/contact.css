@@ -1,5 +1,6 @@
 .contactFormContainer {
   height: auto;
+  margin: 19vh 0vw;
   border-radius: 1rem;
   background-color: rgb(214, 208, 208);
   box-shadow: 0px 0px 10px black inset;

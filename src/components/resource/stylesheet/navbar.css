@@ -2,6 +2,11 @@
   padding: 2vh 0vw;
   background-color: rgba(44, 49, 47, 0.801);
   display: flex;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  z-index: 100;
+  left: 0px;
   align-items: center;
   color: rgb(216, 206, 206);
   justify-content: center;
