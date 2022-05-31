@@ -32,6 +32,9 @@ export default function AllCandidates() {
       });
   };
 
+  function scroll() {
+    window.scrollTo(0, 0);
+  }
   useEffect(() => {
     console.log("in use");
     preload();
@@ -52,6 +55,7 @@ export default function AllCandidates() {
               <button
                 onClick={() => {
                   setPage(prev);
+                  scroll();
                 }}
               >
                 Prev
@@ -63,6 +67,7 @@ export default function AllCandidates() {
               <button
                 onClick={() => {
                   setPage(next);
+                  scroll();
                 }}
               >
                 next
