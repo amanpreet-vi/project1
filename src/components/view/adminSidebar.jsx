@@ -14,7 +14,6 @@ export default function AdminSideBar() {
 				<Link className="links" to="/admin/dashboard/reviews">
 					<div>Manage Reviews</div>
 				</Link>
-				<div className="links">Manage User</div>
 
 				<div></div>
 			</div>
