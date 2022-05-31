@@ -42,8 +42,9 @@ export default function Review({ reviews, candidateID }) {
 									{review.rating}
 								</div>
 								<div>{review.comment}</div>
-								{user._id === review.author ||
-								user.role === 1 ? (
+								{user &&
+								(user._id === review.author ||
+									user.role === 1) ? (
 									<button
 										onClick={handleClick(review._id)}
 										type="submit"
