@@ -2,6 +2,7 @@
   width: 20vw;
   padding: 2em;
   border-radius: 10px;
+  box-shadow: 0px 0px 40px black;
   background-color: rgb(218, 208, 208);
 }
 .updateForm > form {
@@ -12,7 +13,9 @@
   display: flex;
   flex-direction: column;
 }
-
+.updateForm > form > div > h1 {
+  text-align: center;
+}
 .updateForm > form > div > button {
   height: 50px;
   outline: none;

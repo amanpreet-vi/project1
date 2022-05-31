@@ -22,6 +22,7 @@ export default function CandidateUpdate(props) {
       <div className="updateForm">
         <form target="#">
           <div>
+            <h1>Update Data</h1>
             <div>
               <label htmlFor="Name">Name: </label>
               <input

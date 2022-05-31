@@ -8,7 +8,7 @@
   z-index: 1;
   background-color: rgb(218, 208, 208);
 }
-.infoContainer div {
+.infoContainer > div {
   font-size: 2vh;
 }
 
@@ -25,7 +25,7 @@
 .infoContainer button > a {
   color: black;
 }
-.infoContainer > .infoContainer .pic {
+.infoContainer > .pic {
   height: 200px;
   width: 200px;
   border-radius: 5px;
