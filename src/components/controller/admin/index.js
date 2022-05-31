@@ -18,11 +18,12 @@ export const deleteReview = (token, candidateID, reviewID, userID) => {
 };
 
 export const updateCandidate = (userId, candidateId, token, data) => {
-	return fetch(`${API}/admin/:userId/candidate/:candidateId`, {
+	return fetch(`${API}/admin/${userId}/candidate/${candidateId}`, {
 		method: 'PUT',
 		headers: {
 			Accept: 'application/json',
 			'Content-Type': 'application/json',
+			Authorization: `Bearer ${token}`,
 		},
 		body: JSON.stringify(data),
 	})
