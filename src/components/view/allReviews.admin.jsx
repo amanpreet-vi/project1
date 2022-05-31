@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { Redirect } from "react-router-dom";
 import { isAuthenticated } from "../controller/authentication";
 import { deleteReview, getAllReviews } from "../controller/reviewApiCall";
-import "../resource/stylesheet/review.css";
+import "../resource/stylesheet/allReview.css";
 
 export default function AllReviews() {
   const { user, token } = isAuthenticated();
@@ -40,7 +40,7 @@ export default function AllReviews() {
   }, []);
   return (
     <>
-      <div className="reviewContainer">
+      <div className="allReviewContainer">
         {reviews.length === 0 ? (
           <div>No Review Yet</div>
         ) : (
